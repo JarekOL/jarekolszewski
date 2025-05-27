@@ -64,7 +64,7 @@ export default async function RootLayout({
                 <main className="flex-1 w-full overflow-x-hidden relative min-h-[90vh]">
                     {children}
                 </main>
-                {cookiesAccepted && <FacebookPixel />}
+                {cookiesAccepted && <FacebookPixel />} 
                 {!cookiesAccepted && <CookieBanner />}
 
                 <Messenger />
