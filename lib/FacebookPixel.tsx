@@ -5,7 +5,7 @@ import Script from "next/script";
 export default function FacebookPixel() {
     return (
         <>
-            <Script 
+            <Script
                 id="804838180220019"
                 strategy="afterInteractive"
                 dangerouslySetInnerHTML={{
@@ -18,17 +18,17 @@ export default function FacebookPixel() {
             t.src=v;s=b.getElementsByTagName(e)[0];
             s.parentNode.insertBefore(t,s)}(window, document,'script',
             'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', 'TWÓJ_PIXEL_ID');
+            fbq('init', '804838180220019');
             fbq('track', 'PageView');
           `,
                 }}
-            /> 
+            />
             <noscript>
                 <img
                     height="1"
                     width="1"
                     style={{ display: "none" }}
-                    src="https://www.facebook.com/tr?id=TWÓJ_PIXEL_ID&ev=PageView&noscript=1"
+                    src="https://www.facebook.com/tr?id=804838180220019&ev=PageView&noscript=1"
                 />
             </noscript>
         </>

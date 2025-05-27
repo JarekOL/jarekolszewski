@@ -17,7 +17,7 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-    metadataBase: new URL("https://www.jarekolszewski.pl"),
+    metadataBase: new URL("https://jarekolszewski.pl"),
     keywords: [
         "fotograf Siedlce",
         "fotografia ślubna",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
         "fotograf warszawa",
     ],
     openGraph: {
-        url: "https://www.jarekolszewski.pl/",
+        url: "https://jarekolszewski.pl/",
         siteName: "Jarek Olszewski - Fotograf",
         locale: "pl_PL",
         type: "website",
@@ -64,8 +64,8 @@ export default async function RootLayout({
                 <main className="flex-1 w-full overflow-x-hidden relative min-h-[90vh]">
                     {children}
                 </main>
-                {cookiesAccepted && <FacebookPixel />} 
-                {!cookiesAccepted && <CookieBanner />} 
+                {cookiesAccepted && <FacebookPixel />}
+                {!cookiesAccepted && <CookieBanner />}
 
                 <Messenger />
                 <ScrollToTopButton />
