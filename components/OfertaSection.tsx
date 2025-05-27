@@ -64,7 +64,7 @@ export default function OfertaSection() {
                                     fill
                                     sizes="180px"
                                     alt={label}
-                                    title={`${label} - Jarel Olszewski`}
+                                    title={`${label} - Jarek Olszewski`}
                                     className="object-cover"
                                     draggable="false"
                                 />

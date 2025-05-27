@@ -5,6 +5,7 @@ import InstagramGrid from "@/components/instagram/InstagramGrid";
 import OfertaSection from "@/components/OfertaSection";
 import PhotoSwipe from "@/components/PhotoSwipe";
 import TitleH1 from "@/components/TitleH1";
+import { OFERTALINKS } from "@/constants/Links";
 import { getImagesFromFolder } from "@/lib/getImagesFromFolder";
 import { Metadata } from "next";
 import Link from "next/link";
@@ -79,6 +80,19 @@ export default function PortfolioPage() {
             </section>
 
             <OfertaSection />
+              <div className="max-w-2xl mx-auto text-sm space-x-4 space-y-8 p-4 text-center mb-12">
+                {OFERTALINKS.map(({ href, label }) => (
+                    <Link
+                        href={href}
+                        key={label}
+                        className="p-2 w-max hover:text-brand "
+                     
+                        
+                    >
+                        {label}
+                    </Link>
+                ))}
+              </div>
 
             <section id="portfolio" className="pt-12 bg-gray-100">
                 <div className="max-w-4xl mx-auto px-4">

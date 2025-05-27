@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 
-const words = ["Cześć", "Hej", "Witaj"];
+const words = ["Cześć", "Hello", "Ciao","Hola"];
 
 export default function TypingHeader() {
     const [text, setText] = useState("");

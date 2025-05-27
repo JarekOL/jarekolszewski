@@ -14,6 +14,7 @@ import Link from "next/link";
 import { getBlogsByCategory } from "@/lib/getBlogsByCategory";
 import Image from "next/image";
 import { CiShare1 } from "react-icons/ci";
+import ContactBtns from "@/components/ContactBtns";
 
 const pageTitle = "Fotografia ślubna - uchwyć magię najważniejszego dnia";
 const pageDescription =
@@ -78,7 +79,7 @@ export default async function FotografiaSlubna() {
     const blogs = [...x, ...y, ...z];
     const allImages = getImagesFromFolder("PodglądoweZdjecia", 6);
     const allImagesWeding = getImagesFromFolder(
-        "blogs/fotografia-slubna/fotografia-slubna-w-siedlcach-panderoza",
+        "blogs/fotografia-slubna/top-fotografia-slubna",
         6
     );
 
@@ -208,6 +209,9 @@ export default async function FotografiaSlubna() {
                                 </div>
                             </div>
                         </section>
+                           <div className="mt-12 py-10 border-y flex items-center justify-center text-center w-full">
+                                                    <ContactBtns />
+                                                </div>
                         <div className="mt-12">
                             <ContactForm />
                         </div>

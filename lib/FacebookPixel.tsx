@@ -6,7 +6,7 @@ export default function FacebookPixel() {
     return (
         <>
             <Script 
-                id="fb-pixel"
+                id="501829122890586"
                 strategy="afterInteractive"
                 dangerouslySetInnerHTML={{
                     __html: `

@@ -2,7 +2,7 @@
 title: "Top fotografia chrztu"
 slug: "top-fotografia-chrztu"
 category: "fotografia-chrztu"
-date: "2025-05-24T15:40:42.854Z"
+date: "2023-02-12T15:40:42.854Z"
 image: "/Images/blogs/fotografia-chrztu/top-fotografia-chrztu/www.jarekolszewski.pl_fotografia_chrzest (1).webp"
 images:
   - src: /Images/blogs/fotografia-chrztu/top-fotografia-chrztu/www.jarekolszewski.pl_fotografia_chrzest (1).webp
