@@ -81,6 +81,7 @@ export default async function InstagramGrid() {
                         key={i}
                         media_url={post?.media_url || null}
                         permalink={post?.permalink || null}
+                        media_type={post?.media_type}
                         alt={`Instagram image ${i + 1}`}
                     />
                 ))}
