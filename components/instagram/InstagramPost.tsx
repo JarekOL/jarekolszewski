@@ -6,12 +6,14 @@ type InstagramPostProps = {
     media_url: string | null;
     permalink: string | null;
     alt: string;
+    media_type?: string;
 };
 
 export default function InstagramPost({
     media_url,
     permalink,
     alt,
+    media_type,
 }: InstagramPostProps) {
     if (!media_url || !permalink) {
         return (
@@ -24,15 +26,26 @@ export default function InstagramPost({
     return (
         <Link href={permalink} target="_blank" rel="noopener noreferrer">
             <div className="relative aspect-square">
-                 <Image
-                    src={media_url}
-                    alt={alt}
-                    sizes="20vw"
-                    fill
-                    className="object-cover"
-                    loading="lazy"
-                    placeholder="empty"
-                />
+                {media_type === "VIDEO" ? (
+                    <video
+                        src={media_url}
+                        className="w-full h-full object-cover"
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                    />
+                ) : (
+                    <Image
+                        src={media_url}
+                        alt={alt}
+                        sizes="20vw"
+                        fill
+                        className="object-cover"
+                        loading="lazy"
+                        placeholder="empty"
+                    />
+                )}
             </div>
         </Link>
     );
