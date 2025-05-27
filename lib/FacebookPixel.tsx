@@ -22,7 +22,7 @@ export default function FacebookPixel() {
             fbq('track', 'PageView');
           `,
                 }}
-            />
+            /> 
             <noscript>
                 <img
                     height="1"
