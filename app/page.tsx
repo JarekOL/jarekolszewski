@@ -35,7 +35,7 @@ const heroImage = "/Images/home/fotograf-siedlce-jarek-olszewski.webp";
 
 export const metadata: Metadata = {
     alternates: {
-        canonical: "https://www.jarekolszewski.pl/",
+        canonical: "https://jarekolszewski.pl/",
     },
     title: pageTitle,
     description: pageDescription,
@@ -69,10 +69,10 @@ export default function Home() {
                 <FadeInOnScroll delay={0.1}>
                     <div className="relative flex lg:flex-row flex-col justify-center items-center lg:mt-16 mt-20 text-start">
                         <Image
-                            src="/Images/home/fotograf-siedlce-jarek-olszewski.avif"
+                            src="/Images/home/fotograf-siedlce-jarek-olszewski.webp"
                             alt="fotograf siedlce jarek-olszewski"
-                            className=" object-cover"
-                            width={250}
+                            className=" object-cover shadow-2xl"
+                            width={450}
                             height={300}
                             priority
                         />

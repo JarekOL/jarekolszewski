@@ -14,7 +14,7 @@ const heroImage = "/Images/home/fotograf-siedlce-jarek-olszewski.webp";
 
 export const metadata: Metadata = {
      alternates: {
-        canonical: "https://www.jarekolszewski.pl/o-mnie",
+        canonical: "https://jarekolszewski.pl/o-mnie",
     },
     title: pageTitle,
     description: pageDescription,

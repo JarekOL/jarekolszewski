@@ -11,7 +11,7 @@ const heroImage =
 
 export const metadata: Metadata = {
     alternates: {
-        canonical: "https://www.jarekolszewski.pl/sesja-slubna",
+        canonical: "https://jarekolszewski.pl/sesja-slubna",
     },
     title: pageTitle,
     description: pageDescription,

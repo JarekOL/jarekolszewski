@@ -7,7 +7,7 @@ const heroImage = "/Images/home/fotograf-siedlce-jarek-olszewski.webp";
 
 export const metadata: Metadata = {
     alternates: {
-        canonical: "https://www.jarekolszewski.pl/regulamin-i-polityka-prywatnoci",
+        canonical: "https://jarekolszewski.pl/regulamin-i-polityka-prywatnoci",
     },
     title: pageTitle,
     description: pageDescription,
