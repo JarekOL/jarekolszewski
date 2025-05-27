@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-    siteUrl: "https://jarekolszewski.pl/",
+    siteUrl: "https://jarekolszewski.pl",
     generateRobotsTxt: true,
     sitemapSize: 7000,
     changefreq: "daily",
