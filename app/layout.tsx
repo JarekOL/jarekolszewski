@@ -65,7 +65,7 @@ export default async function RootLayout({
                     {children}
                 </main>
                 {cookiesAccepted && <FacebookPixel />} 
-                {!cookiesAccepted && <CookieBanner />}
+                {!cookiesAccepted && <CookieBanner />} 
 
                 <Messenger />
                 <ScrollToTopButton />
