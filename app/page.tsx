@@ -190,7 +190,6 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-            <InstagramGrid />
             <StepsWithLazyBackground />
             <div className="flex flex-col justify-center items-center space-y-4 bg-gray-100 py-24 px-12 text-black">
                 <FadeInOnScroll delay={0.1}>
@@ -202,6 +201,7 @@ export default function Home() {
                 <CTASendMail title="Napisz Do Mnie" />
             </div>
 
+            <InstagramGrid />
             <FaqAccordion />
 
             <div className="bg-gray-100 mt-4 px-6 md:px-12 py-16">
