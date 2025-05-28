@@ -3,7 +3,6 @@ import UniversalPage from "@/components/UniversalPage";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { GridImage } from "@/types/addPages";
-export const dynamic = "auto";
 
 export async function generateMetadata({
     params,
@@ -19,7 +18,6 @@ export async function generateMetadata({
         notFound();
     }
 }
-
 
 export default async function Page({
     params,
