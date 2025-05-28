@@ -3,6 +3,7 @@ import UniversalPage from "@/components/UniversalPage";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { GridImage } from "@/types/addPages";
+import { getBlogs } from "@/lib/getBlogs";
 export const dynamic = "auto";
 
 export async function generateMetadata({
@@ -18,6 +19,15 @@ export async function generateMetadata({
     } catch {
         notFound();
     }
+}
+
+export async function generateStaticParams() {
+    const blogs = await getBlogs();
+
+    return blogs.map((blog) => ({
+        category: blog.category,
+        slug: blog.slug,
+    }));
 }
 
 export default async function Page({
