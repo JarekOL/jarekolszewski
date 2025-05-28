@@ -24,8 +24,14 @@ export default function InstagramPost({
     }
 
     return (
-        <Link href={permalink} target="_blank" rel="noopener noreferrer">
+        <Link
+            href={permalink}
+            target="_blank"
+            rel="noopener noreferrer"
+            title={alt}
+        >
             <div className="relative aspect-square">
+                <span className="sr-only">{alt}</span>
                 {media_type === "VIDEO" ? (
                     <video
                         src={media_url}

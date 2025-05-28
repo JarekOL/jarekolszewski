@@ -66,6 +66,7 @@ export default function Home() {
                             className=" object-cover shadow-2xl"
                             width={450}
                             height={300}
+                            sizes="300px"
                             priority
                         />
                         <div className="bg-black/60 backdrop-blur-sm -mt-12 lg:mt-0 lg:-ml-20 px-8 py-6 w-[330px] lg:w-[400px] text-white text-xs tracking-tight">
