@@ -65,11 +65,11 @@ const OFERTAIMAGES = [
         desc: "pozwala oswoić się z aparatem, wyjątkowa pamiątka z czasu przed ślubnego",
     },
     {
-        src: "/Images/oferta/CHRZEST.avif",
+        src: "/Images/blogs/fotografia-slubna/agata-i-pawel-slubna-opowiesc/070_agata-i-pawel-wesele-zajazd-chodowiak-siedlce-jarek-olszewski-fotografia.webp",
         position: "53% 50%",
-        href: "/fotografia-chrztu",
-        title: "Reportaż chrztu",
-        desc: "Spokojna chwila po ślubie w ulubionym miejscu.",
+        href: "/fotografia-slubna",
+        title: "Fotografia Ślubna",
+        desc: "Emocjonalna fotografia ślubna pełna magii",
     },
 ];
 
