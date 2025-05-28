@@ -1,3 +1,4 @@
+export const dynamic = "force-static";
 import InstagramGrid from "@/components/instagram/InstagramGrid";
 import Opinions from "@/components/Opinions";
 import PhotoSwipe from "@/components/PhotoSwipe";
@@ -13,7 +14,7 @@ const pageDescription =
 const heroImage = "/Images/home/fotograf-siedlce-jarek-olszewski.webp";
 
 export const metadata: Metadata = {
-     alternates: {
+    alternates: {
         canonical: "https://jarekolszewski.pl/o-mnie",
     },
     title: pageTitle,

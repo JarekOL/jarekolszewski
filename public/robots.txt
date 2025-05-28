@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://jarekolszewski.pl
+
+# Sitemaps
+Sitemap: https://jarekolszewski.pl/sitemap.xml

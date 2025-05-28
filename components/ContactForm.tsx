@@ -45,7 +45,7 @@ const FormField = ({
                     value={value}
                     onChange={onChange}
                     className={`w-full p-2 pr-10 lg:pr-2 border rounded text-black outline-1 outline-brand ${
-                        isDate ? "appearance-none" : ""
+                        isDate ? "h-10" : ""
                     }`}
                 />
             </div>

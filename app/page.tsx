@@ -1,7 +1,7 @@
 // External
 import Image from "next/image";
 import Link from "next/link";
-import dynamic from "next/dynamic";
+export const dynamic = "force-static";
 import type { Metadata } from "next";
 
 // Components
@@ -12,21 +12,13 @@ import { TEXT_SECTIONS } from "@/constants/homepage";
 import LinkShare from "@/components/ui/LinkShare";
 import FadeInOnScroll from "@/components/FadeInOnScroll";
 import TypingHeader from "@/components/TypingHeader";
-
-// Dynamic Components
-const Carousel = dynamic(() => import("@/components/Carousel"), { ssr: true });
-const SesjaComponent = dynamic(() => import("@/components/SesjaComponent"));
-const CTASendMail = dynamic(() => import("@/components/CTASendMail"));
-const InviteSocialMedia = dynamic(
-    () => import("@/components/InviteSocialMedia")
-);
-const InstagramGrid = dynamic(
-    () => import("@/components/instagram/InstagramGrid")
-);
-const Opinions = dynamic(() => import("@/components/Opinions"));
-const StepsWithLazyBackground = dynamic(
-    () => import("@/components/StepsWithLazyBackground")
-);
+import Carousel from "@/components/Carousel";
+import SesjaComponent from "@/components/SesjaComponent";
+import Opinions from "@/components/Opinions";
+import StepsWithLazyBackground from "@/components/StepsWithLazyBackground";
+import CTASendMail from "@/components/CTASendMail";
+import InstagramGrid from "@/components/instagram/InstagramGrid";
+import InviteSocialMedia from "@/components/InviteSocialMedia";
 
 const pageTitle = "Fotograf Siedlce: Fotografia Ślubna i Artystyczna, Foto";
 const pageDescription =

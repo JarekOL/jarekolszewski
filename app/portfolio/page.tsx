@@ -1,3 +1,4 @@
+export const dynamic = "force-static";
 import { MainBtn } from "@/components/Buttons/MainBtn";
 import ContactForm from "@/components/ContactForm";
 import CTASendMail from "@/components/CTASendMail";
@@ -80,19 +81,17 @@ export default function PortfolioPage() {
             </section>
 
             <OfertaSection />
-              <div className="max-w-2xl mx-auto text-sm space-x-4 space-y-8 p-4 text-center mb-12">
+            <div className="max-w-2xl mx-auto text-sm space-x-4 space-y-8 p-4 text-center mb-12">
                 {OFERTALINKS.map(({ href, label }) => (
                     <Link
                         href={href}
                         key={label}
                         className="p-2 w-max hover:text-brand "
-                     
-                        
                     >
                         {label}
                     </Link>
                 ))}
-              </div>
+            </div>
 
             <section id="portfolio" className="pt-12 bg-gray-100">
                 <div className="max-w-4xl mx-auto px-4">

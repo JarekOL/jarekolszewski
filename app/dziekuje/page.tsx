@@ -1,5 +1,5 @@
 "use client";
-
+export const dynamic = "force-static";
 import { useEffect } from "react";
 import confetti from "canvas-confetti";
 import Link from "next/link";

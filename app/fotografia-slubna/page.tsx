@@ -3,6 +3,7 @@ import HeroSection from "../../components/HeroSection";
 import CarouselProps from "@/components/CarouselProps";
 import BlogList from "@/components/BlogList";
 import ContactForm from "@/components/ContactForm";
+export const dynamic = "force-static";
 import ParagraphWithBullets from "@/components/ParagraphWithBullets";
 import { Metadata } from "next";
 import { getImagesFromFolder } from "@/lib/getImagesFromFolder";
@@ -209,9 +210,9 @@ export default async function FotografiaSlubna() {
                                 </div>
                             </div>
                         </section>
-                           <div className="mt-12 py-10 border-y flex items-center justify-center text-center w-full">
-                                                    <ContactBtns />
-                                                </div>
+                        <div className="mt-12 py-10 border-y flex items-center justify-center text-center w-full">
+                            <ContactBtns />
+                        </div>
                         <div className="mt-12">
                             <ContactForm />
                         </div>

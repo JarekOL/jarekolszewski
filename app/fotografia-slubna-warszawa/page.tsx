@@ -2,6 +2,7 @@ import UniversalPage from "@/components/UniversalPage";
 import { getBlogsByCategory } from "@/lib/getBlogsByCategory";
 import { getImagesFromFolder } from "@/lib/getImagesFromFolder";
 import { Metadata } from "next";
+export const dynamic = "force-static";
 
 const pageTitle = "Fotograf Ślubny Warszawa - Emocje, Styl, Ponadczasowe kadry";
 const pageDescription =
@@ -132,7 +133,6 @@ export default async function Page() {
                 "Szybki termin realizacji - zdjęcia gotowe w 21 dni",
             ],
         },
-
     };
 
     return <UniversalPage content={content} />;

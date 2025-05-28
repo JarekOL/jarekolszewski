@@ -2,6 +2,7 @@ import { getBlogs } from "@/lib/getBlogs";
 import BlogList from "@/components/BlogList";
 import InviteSocialMedia from "@/components/InviteSocialMedia";
 import { Metadata } from "next";
+export const dynamic = "force-static";
 
 const pageTitle = "Blog - Jarek Olszewski | Fotograf Siedlce";
 const pageDescription =

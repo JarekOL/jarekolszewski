@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-
+export const dynamic = "force-static";
 const pageTitle = "Regulamin i Polityka Prywatności | Jarek Olszewski";
 const pageDescription =
     "Zapoznaj się z regulaminem oraz polityką prywatności serwisu Jarek Olszewski. Dowiedz się, jak chronimy Twoje dane osobowe i korzystamy z plików cookies, aby zapewnić bezpieczne i komfortowe korzystanie ze strony";

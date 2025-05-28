@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+export const dynamic = "force-static";
 import { getImagesFromFolder } from "@/lib/getImagesFromFolder";
 import { getBlogsByCategory } from "@/lib/getBlogsByCategory";
 import UniversalPage from "@/components/UniversalPage";

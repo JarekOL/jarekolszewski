@@ -1,3 +1,4 @@
+export const dynamic = "force-static";
 import Gallery from "./_components/Gallery";
 import CTASendMail from "@/components/CTASendMail";
 import { FaCheckCircle } from "react-icons/fa";

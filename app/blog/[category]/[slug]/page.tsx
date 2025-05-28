@@ -1,12 +1,9 @@
 import { notFound } from "next/navigation";
 import { marked } from "marked";
-import dynamic from "next/dynamic";
 import PhotoSwipeProvider from "@/components/PhotoSwipeProvider";
 import InviteSocialMedia from "@/components/InviteSocialMedia";
+export const dynamic = "force-static";
 
-const BlogGallery = dynamic(() => import("./BlogGallery"), {
-    ssr: true,
-});
 
 function capitalizeWithSpaces(str: string): string {
     const withSpaces = str.replace(/-/g, " ");
@@ -56,6 +53,7 @@ import { getBlogBySlugAndCategory } from "@/lib/getBlogBySlugAndCategory";
 import { getRelatedBlogsByCategory } from "@/lib/getRelatedBlogsByCategory";
 import BlogList from "@/components/BlogList";
 import CTASendMail from "@/components/CTASendMail";
+import BlogGallery from "./BlogGallery";
 
 function formatCategoryName(category: string) {
     return category

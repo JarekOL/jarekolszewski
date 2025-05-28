@@ -1,3 +1,4 @@
+export const dynamic = "force-static";
 import ContactBtns from "@/components/ContactBtns";
 import ContactForm from "@/components/ContactForm";
 import TitleH1 from "@/components/TitleH1";
