@@ -6,8 +6,7 @@ module.exports = {
     changefreq: "daily",
     priority: 0.7,
     trailingSlash: false,
-    additionalPaths: async (config) => {
-        // ręcznie dodajesz ścieżki, jeśli trzeba
+    additionalPaths: async () => {
         return [{ loc: "/sesja-slubna-w-gorach" }];
     },
 };
