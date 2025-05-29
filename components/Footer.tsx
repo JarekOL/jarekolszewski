@@ -52,6 +52,7 @@ export default function Footer() {
                             aria-label="Facebook"
                         >
                             <FaFacebook size={20} />
+                            <span className="sr-only">Facebook</span>
                         </Link>
                         <Link
                             href="https://www.instagram.com/jarek.olszewski.fotografia/"
@@ -61,6 +62,7 @@ export default function Footer() {
                             aria-label="Instagram"
                         >
                             <FaInstagram size={20} />
+                            <span className="sr-only">Instagram</span>
                         </Link>
                         <Link
                             href="https://g.co/kgs/BeBrn5X"
@@ -70,6 +72,7 @@ export default function Footer() {
                             aria-label="Google"
                         >
                             <FaGoogle size={20} />
+                            <span className="sr-only">Google</span>
                         </Link>
                     </div>
                 </div>

@@ -31,7 +31,7 @@ export default function InstagramPost({
             title={alt}
         >
             <div className="relative aspect-square">
-                <span className="sr-only">{alt}</span>
+                <span className="sr-only">{`${alt} Instagram`}</span>
                 {media_type === "VIDEO" ? (
                     <video
                         src={media_url}

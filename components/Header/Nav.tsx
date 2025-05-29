@@ -81,6 +81,7 @@ export default function Nav() {
                                 className="text-white hover:text-[#ffcbc4] transition-all text-2xl"
                             >
                                 <TiSocialFacebook />
+                                <span className="sr-only">Facebook</span>
                             </Link>
                             <Link
                                 href="https://www.instagram.com/jarek.olszewski.fotografia/"
@@ -90,6 +91,7 @@ export default function Nav() {
                                 className="text-white hover:text-[#ffcbc4] transition-all text-xl"
                             >
                                 <FiInstagram />
+                                <span className="sr-only">Instagram</span>
                             </Link>
                         </div>
                         <div className="flex flex-col h-full px-6">
@@ -167,6 +169,7 @@ export default function Nav() {
                             className="hover:text-brand-navHover transition-all text-2xl"
                         >
                             <TiSocialFacebook />
+                            <span className="sr-only">Facebook</span>
                         </Link>
                         <Link
                             href="https://www.instagram.com/jarek.olszewski.fotografia/"
@@ -176,6 +179,7 @@ export default function Nav() {
                             className="hover:text-brand-navHover transition-all text-xl"
                         >
                             <FiInstagram />
+                            <span className="sr-only">Instagram</span>
                         </Link>
                     </div>
                 </div>
