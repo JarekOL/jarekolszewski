@@ -17,7 +17,7 @@ export default function CookieBanner() {
         document.cookie =
             "cookies-accepted=true; path=/; max-age=31536000; samesite=lax";
         setVisible(false);
-        window.location.reload();
+        // window.location.reload();
     };
 
     if (!visible) return null;

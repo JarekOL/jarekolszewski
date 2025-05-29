@@ -54,6 +54,7 @@ export default async function RootLayout({
                     type="font/woff2"
                     crossOrigin="anonymous"
                 />
+                <FacebookPixel />
             </head>
             <body
                 className={`flex flex-col min-h-screen w-full font-light antialiased overflow-y-auto touch-auto
@@ -64,7 +65,6 @@ export default async function RootLayout({
                 <main className="flex-1 w-full overflow-x-hidden relative min-h-[90vh]">
                     {children}
                 </main>
-                {cookiesAccepted && <FacebookPixel />}
                 {!cookiesAccepted && <CookieBanner />}
 
                 <Messenger />
