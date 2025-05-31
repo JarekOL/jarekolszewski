@@ -10,6 +10,7 @@ import { cookies } from "next/headers";
 import CookieBanner from "@/components/CookieBanner";
 import IntroOverlay from "@/components/IntroOverlay";
 import FacebookPixel from "@/lib/FacebookPixel";
+import GAnalytics from "@/lib/Analytics/GAnalytics";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -70,6 +71,7 @@ export default async function RootLayout({
                 <Messenger />
                 <ScrollToTopButton />
                 <Footer />
+                <GAnalytics />
             </body>
         </html>
     );
