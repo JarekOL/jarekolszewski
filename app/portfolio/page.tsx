@@ -81,17 +81,21 @@ export default function PortfolioPage() {
             </section>
 
             <OfertaSection />
-            <div className="max-w-2xl mx-auto text-sm space-x-4 space-y-8 p-4 text-center mb-12">
-                {OFERTALINKS.map(({ href, label }) => (
-                    <Link
-                        href={href}
-                        key={label}
-                        className="p-2 w-max hover:text-brand "
-                    >
-                        {label}
-                    </Link>
-                ))}
-            </div>
+            <section className="pb-16 bg-white">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 max-w-5xl mx-auto px-6">
+                    {OFERTALINKS.map(({ href, label }) => (
+                        <Link
+                            href={href}
+                            key={label}
+                            className="group block p-6 text-center border border-gray-100 bg-gray-50/30 hover:bg-gray-50 transition-colors duration-200"
+                        >
+                            <span className="text-sm font-medium text-gray-700 group-hover:text-gray-900 transition-colors duration-200">
+                                {label}
+                            </span>
+                        </Link>
+                    ))}
+                </div>
+            </section>
 
             <section id="portfolio" className="pt-12 bg-gray-100">
                 <div className="max-w-4xl mx-auto px-4">
