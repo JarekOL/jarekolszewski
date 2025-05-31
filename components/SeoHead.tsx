@@ -12,8 +12,8 @@ export default function SeoHead() {
                     "@context": "https://schema.org",
                     "@type": "Photographer",
                     name: "Jarek Olszewski",
-                    url: "https://www.jarekolszewski.pl/",
-                    image: "https://www.jarekolszewski.pl/Images/fotograf-siedlce-jarek-olszewski.jpg",
+                    url: "https://jarekolszewski.pl/",
+                    image: "https://jarekolszewski.pl/Images/fotograf-siedlce-jarek-olszewski.jpg",
                     description:
                         "Fotograf ślubny w Siedlcach - Jarek Olszewski.",
                     address: {
