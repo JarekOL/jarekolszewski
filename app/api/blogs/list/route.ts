@@ -19,6 +19,7 @@ export async function GET() {
             allBlogs.push({
                 title: data.title,
                 slug: data.slug,
+                heroSrc: data.image,
                 category: data.category,
                 date: data.date,
             });

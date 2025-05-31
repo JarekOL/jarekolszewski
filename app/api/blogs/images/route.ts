@@ -1,33 +1,81 @@
+import { NextRequest, NextResponse } from "next/server";
 import fs from "fs";
 import path from "path";
-import { NextResponse } from "next/server";
+import matter from "gray-matter";
 
-const IMAGES_PATH = path.join(process.cwd(), "public", "Images");
+// Katalog, w którym trzymane są zdjęcia blogów
+const BLOG_IMAGES_PATH = path.join(process.cwd(), "public", "Images", "blogs");
+const CONTENT_BLOGS_PATH = path.join(process.cwd(), "content", "blogs");
 
-export async function DELETE(req: Request) {
+export async function DELETE(req: NextRequest) {
     try {
-        const { imageName } = await req.json();
+        const { imageName, category, slug } = await req.json();
 
-        if (!imageName) {
+        if (!imageName || !category || !slug) {
             return NextResponse.json(
-                { error: "Brak nazwy pliku" },
+                { error: "Brak nazwy pliku, kategorii lub slug" },
                 { status: 400 }
             );
         }
 
-        const imagePath = path.join(IMAGES_PATH, imageName);
+        // Ścieżka do pliku zdjęcia
+        const filePath = path.join(BLOG_IMAGES_PATH, category, slug, imageName);
+        console.log("Plik zdjęcia:", filePath);
 
-        if (!fs.existsSync(imagePath)) {
+        if (!fs.existsSync(filePath)) {
             return NextResponse.json(
-                { error: "Plik nie istnieje" },
+                { error: "Plik zdjęcia nie istnieje" },
                 { status: 404 }
             );
         }
 
-        fs.unlinkSync(imagePath);
+        // Usuwamy plik zdjęcia
+        fs.unlinkSync(filePath);
 
-        return NextResponse.json({ message: "Usunięto zdjęcie" });
-    } catch (error) {
-        return NextResponse.json({ error: "Błąd serwera" }, { status: 500 });
+        // Ścieżka do pliku markdown
+        const mdPath = path.join(CONTENT_BLOGS_PATH, category, `${slug}.md`);
+        console.log("Plik markdown:", mdPath);
+
+        if (!fs.existsSync(mdPath)) {
+            return NextResponse.json(
+                { error: "Plik markdown nie istnieje" },
+                { status: 404 }
+            );
+        }
+
+        // Wczytujemy plik markdown
+        const mdFile = fs.readFileSync(mdPath, "utf-8");
+        const parsed = matter(mdFile);
+
+        let { data, content } = parsed;
+
+        const imagePath = `/Images/blogs/${category}/${slug}/${imageName}`;
+
+        if (data.image === imagePath) {
+            data.image = null;
+        }
+
+        if (Array.isArray(data.images)) {
+            data.images = data.images.filter(
+                (img: any) => img.src !== imagePath
+            );
+        }
+
+        const newMarkdown = matter.stringify(content, data);
+
+        fs.writeFileSync(mdPath, newMarkdown, "utf-8");
+
+        return NextResponse.json({
+            message: "Zdjęcie usunięte i wpis w markdown zaktualizowany",
+        });
+    } catch (error: any) {
+        console.error(
+            "Błąd podczas usuwania zdjęcia i aktualizacji markdown:",
+            error
+        );
+        return NextResponse.json(
+            { error: "Wewnętrzny błąd serwera" },
+            { status: 500 }
+        );
     }
 }

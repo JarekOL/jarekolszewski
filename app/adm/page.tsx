@@ -8,7 +8,7 @@ export default function AdminPage() {
                 <Link href="/adm/strona/dodaj">Dodaj Strone</Link>
             </MainBtn>
             <MainBtn>
-                <Link href="/adm/blog/dodaj">Dodaj Blog</Link>
+                <Link href="/adm/blog">Blog</Link>
             </MainBtn>
         </div>
     );

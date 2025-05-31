@@ -2,8 +2,8 @@
 title: "Chrzest – Chwile, które zostają"
 slug: "chrzest-chwile-ktore-zostaja"
 category: "fotografia-chrztu"
-date: "2025-05-22T21:52:27.381Z"
-image: "/Images/blogs/fotografia-chrztu/chrzest-chwile-ktore-zostaja/blog chrzest_43.webp"
+date: "2025-05-31T16:18:46.345Z"
+image: "/Images/blogs/fotografia-chrztu/chrzest-chwile-ktore-zostaja/blog chrzest_11.webp"
 images:
   - src: /Images/blogs/fotografia-chrztu/chrzest-chwile-ktore-zostaja/blog chrzest_01.webp
     width: 1024
@@ -227,3 +227,4 @@ images:
 ---
 
 Fotografia chrztu to subtelne zatrzymanie wyjątkowych momentów, pełnych wzruszeń i rodzinnej miłości. Zdjęcia oddają atmosferę sakramentu oraz naturalne emocje, które tworzą niepowtarzalną pamiątkę na całe życie. Każde ujęcie to piękna opowieść o początku duchowej drogi i bliskości najbliższych.
+
