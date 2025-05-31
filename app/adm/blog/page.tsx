@@ -33,7 +33,9 @@ export default function BlogListPage() {
             </div>
 
             {blogs.length === 0 ? (
-                <p>Brak blogów.</p>
+                <div className="flex items-center justify-center">
+                    <div className="w-8 h-8 border-2 border-transparent animate-spin border-t-blue-500 rounded-full " />
+                </div>
             ) : (
                 <ul className="space-y-4">
                     {blogs.map((blog) => (
