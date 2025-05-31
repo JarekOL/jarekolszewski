@@ -13,7 +13,7 @@ export default function ParagraphWithBullets({
 }: Props) {
     return (
         <div className={`space-y-4 px-6 text-base ${className}`}>
-            {title && <h2 className="text-xl font-medium">{title}</h2>}
+            {title && <h2 className="text-xl font-medium text-center">{title}</h2>}
             {paragraph && (
                 <p className=" text-gray-800 font-medium border-y py-2">{paragraph}</p>
             )}

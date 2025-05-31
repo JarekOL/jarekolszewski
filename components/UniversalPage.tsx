@@ -99,34 +99,56 @@ function SectionWithSubSections({
 
   return (
     <section
-      className="px-4 py-10 max-w-3xl mx-auto text-center space-y-12"
+      className="px-4 sm:px-6 py-16 sm:py-20 max-w-4xl mx-auto"
       aria-labelledby={`section-h2-${slugify(section.h2 ?? "")}`}
       key={sectionKeyPrefix}
     >
-      {section.h2 && (
-        <h2
-          id={`section-h2-${slugify(section.h2)}`}
-          className="text-2xl sm:text-3xl font-light tracking-tight text-neutral-800"
-        >
-          {section.h2}
-        </h2>
-      )}
+     {section.h2 && (
+  <header className="text-center mb-12 sm:mb-16">
+    <h2
+      id={`section-h2-${slugify(section.h2)}`}
+      className="text-2xl sm:text-3xl lg:text-4xl font-normal text-gray-900 mb-6"
+    >
+      {section.h2}
+    </h2>
+    <div className="flex items-center justify-center">
+      <svg width="100" height="20" viewBox="0 0 100 20" className="text-gray-300">
+        {/* Aperture/diaphragm icon */}
+        <g transform="translate(50, 10)">
+          <circle cx="0" cy="0" r="6" stroke="currentColor" strokeWidth="1" fill="none" />
+          <path
+            d="M-4.2,-4.2 L4.2,4.2 M4.2,-4.2 L-4.2,4.2 M0,-6 L0,6 M-6,0 L6,0"
+            stroke="currentColor"
+            strokeWidth="0.8"
+          />
+        </g>
+        {/* Decorative lines */}
+        <line x1="10" y1="10" x2="35" y2="10" stroke="currentColor" strokeWidth="1" />
+        <line x1="65" y1="10" x2="90" y2="10" stroke="currentColor" strokeWidth="1" />
+      </svg>
+    </div>
+  </header>
+)}
 
-      {section.subSections?.map((sub, j) => (
-        <div key={`${sectionKeyPrefix}-subsection-${j}`} className="space-y-4">
-          {sub.h3 && (
-            <h3
-              id={`subsection-h3-${slugify(sub.h3)}`}
-              className="text-xl sm:text-2xl font-light text-left sm:text-center text-neutral-700"
-            >
-              {sub.h3}
-            </h3>
-          )}
-          <p className="text-base sm:text-lg text-neutral-600 leading-relaxed text-left sm:text-center">
-            {sub.content.trim()}
-          </p>
-        </div>
-      ))}
+      <div className="space-y-8 sm:space-y-12">
+        {section.subSections?.map((sub, j) => (
+          <article key={`${sectionKeyPrefix}-subsection-${j}`} className="max-w-2xl mx-auto">
+            {sub.h3 && (
+              <h3
+                id={`subsection-h3-${slugify(sub.h3)}`}
+                className="text-xl sm:text-2xl font-medium text-gray-800 mb-4 sm:mb-6 text-left"
+              >
+                {sub.h3}
+              </h3>
+            )}
+            <div className="prose prose-gray max-w-none">
+              <p className="text-gray-700 leading-7 sm:leading-8 text-base sm:text-lg text-left">
+                {sub.content.trim()}
+              </p>
+            </div>
+          </article>
+        ))}
+      </div>
     </section>
   );
 }
@@ -143,176 +165,223 @@ export default function UniversalPage({
                 backgroundImages={content.hero.backgroundImages}
                 paragraphs={content.hero.paragraphs}
             />
-            <div className="text-center bg-white w-full">
-                <div className="w-full py-10">
-                    <div className="max-w-5xl mx-auto px-4">
-                        <h1 className="text-2xl lg:text-3xl max-w-4xl mx-auto font-light text-center mb-10">
-                            {content.introTitle}
-                        </h1>
-                        {content.introDesc && (
-                            <p className="text-base lg:font-extralight text-gray-700 max-w-5xl lg:text-lg text-center mb-10">
-                                {content.introDesc}
-                            </p>
-                        )}
+            
+            <main className="bg-white">
+                <div className="w-full">
+                    <div className="max-w-5xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
+                        
+                        {/* Główny nagłówek */}
+                        <header className="text-center mb-16 sm:mb-20">
+                            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-normal text-gray-900 mb-6 sm:mb-8 leading-tight max-w-4xl mx-auto">
+                                {content.introTitle}
+                            </h1>
+                            {content.introDesc && (
+                                <div className="max-w-3xl mx-auto">
+                                    <p className="text-lg sm:text-xl text-gray-600 leading-relaxed text-center">
+                                        {content.introDesc}
+                                    </p>
+                                </div>
+                            )}
+                        </header>
+
+                        {/* Siatka obrazów */}
                         {content.gridImages?.length > 0 && (
-                            <div className="grid grid-cols-1 sm:grid-cols-3 sm:gap-3 gap-8 md:gap-6">
-                                {content.gridImages.map((img, index) =>
-                                    img?.src && img?.title && img?.desc ? (
-                                        <ImageComponent
-                                            key={index}
-                                            index={index}
-                                            img={img.src}
-                                            title={img.title}
-                                            desc={img.desc}
-                                        />
-                                    ) : null
-                                )}
-                            </div>
+                            <section className="mb-16 sm:mb-20">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                                    {content.gridImages.map((img, index) =>
+                                        img?.src && img?.title && img?.desc ? (
+                                            <ImageComponent
+                                                key={index}
+                                                index={index}
+                                                img={img.src}
+                                                title={img.title}
+                                                desc={img.desc}
+                                            />
+                                        ) : null
+                                    )}
+                                </div>
+                            </section>
                         )}
 
+                        {/* Pierwsza sekcja treści */}
                         {content.sections?.length > 0 && (
                             <>
                                 {content.sections
                                     .slice(0, 1)
                                     .map((section, i) => (
                                         <SectionWithSubSections
-                                            key={`section-0-2-${i}`}
+                                            key={`section-0-${i}`}
                                             section={section}
-                                            sectionKeyPrefix={`section-0-2-${i}`}
+                                            sectionKeyPrefix={`section-0-${i}`}
                                         />
                                     ))}
                             </>
                         )}
                     </div>
 
-                    <div className="border-y p-12 mx-auto bg-gray-100">
-                        <p className="text-2xl font-medium pb-2">
-                            Napisz do mnie
-                        </p>
-                        <CTASendMail title="Wyślij wiadomość" />
-                    </div>
-                    <div>
+                    {/* Sekcja CTA */}
+                    <section className="border-t border-b border-gray-100 py-16 sm:py-20 bg-gray-50">
+                        <div className="max-w-2xl mx-auto px-4 sm:px-6 text-center">
+                            <h2 className="text-2xl sm:text-3xl font-medium text-gray-900 mb-3">
+                                Napisz do mnie
+                            </h2>
+                            <p className="text-gray-700 mb-8 text-center max-w-lg mx-auto">
+                                Omówmy szczegóły
+                            </p>
+                            <CTASendMail title="Wyślij wiadomość" />
+                        </div>
+                    </section>
+
+                    <div className="max-w-5xl mx-auto px-4 sm:px-6">
+                        {/* Karuzela */}
                         {content.carousel && (
-                            <>
-                                <TitleH2
-                                    title={content.carousel.title}
-                                    desc={content.carousel.desc}
-                                />
+                            <section className="py-16 sm:py-20">
+                                <div className="text-center mb-12 sm:mb-16">
+                                    <TitleH2
+                                        title={content.carousel.title}
+                                        desc={content.carousel.desc}
+                                    />
+                                </div>
                                 <div className="max-w-2xl mx-auto">
                                     <CarouselProps
                                         images={content.carousel.images}
                                     />
                                 </div>
-                            </>
+                            </section>
                         )}
+
+                        {/* Druga sekcja */}
                         {content.sections?.length > 0 && (
                             <>
                                 {content.sections
                                     .slice(1, 2)
                                     .map((section, i) => (
                                         <SectionWithSubSections
-                                            key={`section-2-4-${i}`}
+                                            key={`section-1-${i}`}
                                             section={section}
-                                            sectionKeyPrefix={`section-2-4-${i}`}
+                                            sectionKeyPrefix={`section-1-${i}`}
                                         />
                                     ))}
                             </>
                         )}
 
+                        {/* Blog */}
                         {content.blog && (
-                            <TitleH2
-                                title={content.blog.title}
-                                desc={content.blog.desc}
-                            />
-                        )}
-                        {content.blogs && (
-                            <>
-                                <div className="max-w-3xl mx-auto">
-                                    <BlogList
-                                        blogs={content.blogs.data}
-                                        limit={6}
-                                        columns={2}
+                            <section className="py-16 sm:py-20">
+                                <div className="text-center mb-12 sm:mb-16">
+                                    <TitleH2
+                                        title={content.blog.title}
+                                        desc={content.blog.desc}
                                     />
                                 </div>
-                            </>
+                                {content.blogs && (
+                                    <div className="max-w-4xl mx-auto">
+                                        <BlogList
+                                            blogs={content.blogs.data}
+                                            limit={6}
+                                            columns={2}
+                                        />
+                                    </div>
+                                )}
+                            </section>
                         )}
 
+                        {/* Lista punktowana */}
                         {content.bullets && (
-                            <div className="max-w-2xl mx-auto my-12">
-                                <ParagraphWithBullets
-                                    title={content.bullets.title}
-                                    paragraph={content.bullets.paragraph}
-                                    bullets={content.bullets.items}
-                                />
-                            </div>
+                            <section className="py-16 sm:py-20">
+                                <div className="max-w-2xl mx-auto">
+                                    <ParagraphWithBullets
+                                        title={content.bullets.title}
+                                        paragraph={content.bullets.paragraph}
+                                        bullets={content.bullets.items}
+                                    />
+                                </div>
+                            </section>
                         )}
 
-                        <div className="mt-12 py-10 border-y flex items-center justify-center text-center w-full bg-gray-100">
-                            <ContactBtns />
-                        </div>
+                        {/* Średnia sekcja kontaktu */}
+                        <section className="py-16 sm:py-20 border-t border-b border-gray-100 bg-gray-50 -mx-4 sm:-mx-6 px-4 sm:px-6">
+                            <div className="max-w-2xl mx-auto text-center">
+                                <ContactBtns />
+                            </div>
+                        </section>
 
+                        {/* Trzecia sekcja */}
                         {content.sections?.length > 0 && (
                             <>
-                                {" "}
                                 {content.sections
                                     .slice(2, 3)
                                     .map((section, i) => (
                                         <SectionWithSubSections
-                                            key={`section-3-x-${i}`}
+                                            key={`section-2-${i}`}
                                             section={section}
-                                            sectionKeyPrefix={`section-2-4-${i}`}
+                                            sectionKeyPrefix={`section-2-${i}`}
                                         />
                                     ))}
                             </>
                         )}
 
-                        <section className="bg-white py-12">
-                            <div className="mx-auto max-w-3xl text-center">
-                                <p className="font-light text-neutral-900 text-xl tracking-tight">
-                                    Opinie klientów
-                                </p>
+                        {/* Opinie klientów */}
+                        <section className="py-16 sm:py-20">
+                            <div className="max-w-3xl mx-auto">
+                                <header className="text-center mb-12 sm:mb-16">
+                                    <h2 className="text-2xl sm:text-3xl font-medium text-gray-900 mb-4">
+                                        Opinie klientów
+                                    </h2>
+                                    <div className="w-12 h-px bg-gray-300 mx-auto"></div>
+                                </header>
+                                
                                 <Opinions />
-                                <div className="flex justify-center items-center">
-                                    <p className="mr-2">Opinie z</p>
-                                    <LinkShare
-                                        title="Google"
-                                        target="_blank"
-                                        href="https://www.google.com/search?q=jarekolszewski"
-                                    />
-                                </div>
-                                <div className="flex items-center justify-center space-x-0.5 mt-2">
-                                    <span className="text-sm">5,0</span>
-                                    <FaStar className="text-yellow-400" />
-                                    <FaStar className="text-yellow-400" />
-                                    <FaStar className="text-yellow-400" />
-                                    <FaStar className="text-yellow-400" />
-                                    <FaStar className="text-yellow-400" />
-                                    <span className="text-sm">(44)</span>
-                                </div>
+                                
+                                <footer className="text-center mt-8 space-y-3">
+                                    <div className="flex justify-center items-center space-x-2 text-sm text-gray-600">
+                                        <span>Opinie z</span>
+                                        <LinkShare
+                                            title="Google"
+                                            target="_blank"
+                                            href="https://www.google.com/search?q=jarekolszewski"
+                                        />
+                                    </div>
+                                    <div className="flex items-center justify-center space-x-1">
+                                        <span className="text-base font-medium text-gray-700">5,0</span>
+                                        <div className="flex space-x-0.5 mx-2">
+                                            {[...Array(5)].map((_, i) => (
+                                                <FaStar key={i} className="text-yellow-400 w-4 h-4" />
+                                            ))}
+                                        </div>
+                                        <span className="text-sm text-gray-500">(44)</span>
+                                    </div>
+                                </footer>
                             </div>
                         </section>
 
-                        <div className="mt-8">
+                        {/* Formularz kontaktowy */}
+                        <section className="py-16 sm:py-20">
                             <ContactForm />
-                        </div>
+                        </section>
+
+                        {/* Pozostałe sekcje */}
                         {content.sections?.length > 0 && (
                             <>
                                 {content.sections.slice(3).map((section, i) => (
                                     <SectionWithSubSections
-                                        key={`section-4-end-${i}`}
+                                        key={`section-${i + 3}`}
                                         section={section}
-                                        sectionKeyPrefix={`section-4-end-${i}`}
+                                        sectionKeyPrefix={`section-${i + 3}`}
                                     />
                                 ))}
                             </>
                         )}
 
-                        <div className="mt-12 max-w-3xl mx-auto">
-                            <InstagramGrid />
-                        </div>
+                        {/* Instagram */}
+                        <section className="py-16 sm:py-20">
+                            <div className="max-w-3xl mx-auto">
+                                <InstagramGrid />
+                            </div>
+                        </section>
                     </div>
                 </div>
-            </div>
+            </main>
         </>
     );
 }
