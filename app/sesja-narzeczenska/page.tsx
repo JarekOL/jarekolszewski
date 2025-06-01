@@ -4,9 +4,10 @@ import { getImagesFromFolder } from "@/lib/getImagesFromFolder";
 import { getBlogsByCategory } from "@/lib/getBlogsByCategory";
 import UniversalPage from "@/components/UniversalPage";
 
-const pageTitle = "Fotografia ślubna - uchwyć magię najważniejszego dnia";
+const pageTitle = "Sesja Narzeczeńska - naturalne zdjęcia zakochanych";
+
 const pageDescription =
-    "Twój ślub to wyjątkowe wydarzenie, pełne wzruszeń, radości i niezapomnianych chwil. Profesjonalna fotografia ślubna to sposób, by zatrzymać te momenty na zawsze. Jako doświadczeni fotografowie ślubni wiemy, jak ważne jest dla Was, aby każdy uśmiech, każdy gest i każda emocja zostały pięknie uwiecznione.";
+    "Sesja narzeczeńska to wyjątkowy sposób, by uchwycić Waszą miłość przed ślubem. Tworzymy naturalne, pełne emocji zdjęcia zakochanych par, które staną się piękną pamiątką na całe życie.";
 
 const heroImage =
     "/Images/blogs/sesja-narzeczenska/magia-sesji-narzeczenskiej/IMG_003sesja-narzeczenska-roksana-kamil-fotograf-jarek-olszewski.webp";
