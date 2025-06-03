@@ -27,6 +27,7 @@ export const metadata: Metadata = {
         "reportaż ślubny",
         "Jarek Olszewski",
         "fotograf warszawa",
+        "siedlce",
     ],
     openGraph: {
         url: "https://jarekolszewski.pl/",
