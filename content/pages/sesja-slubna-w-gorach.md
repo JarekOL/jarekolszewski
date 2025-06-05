@@ -1,6 +1,7 @@
 ---
 title: "Sesja ślubna i plener ślubny – Wyjątkowa sesja w górach"
-description: "Sesja ślubna w plenerze? Wybierz niezapomniany plener ślubny w górach. Fotografia plenerowa, która odda magię Waszego dnia."
+description: "Sesja ślubna w plenerze? 📷 Wybierz niezapomniany plener ślubny w górach 🏔️. Fotografia plenerowa 🌿, która odda magię Waszego dnia ✨.
+"
 blogCategory: "sesja-slubna"
 heroImage: "/Images/sesja-w-gorach/171_malgosia-i-jarek-sesja-slubna-plener-gora-zborow-jarek-olszewski-fotograf.JPG"
 imageFolder: "blogs/fotografia-slubna/top-fotografia-slubna"
