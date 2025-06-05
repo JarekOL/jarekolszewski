@@ -16,7 +16,7 @@ export async function getPageDataFromMarkdown(slug: string) {
     return {
         metadata: {
             alternates: {
-                canonical: `https://www.jarekolszewski.pl/${slug}`,
+                canonical: `https://jarekolszewski.pl/${slug}`,
             },
             title: data.title,
             description: data.description,
