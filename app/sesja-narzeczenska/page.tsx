@@ -7,7 +7,7 @@ import UniversalPage from "@/components/UniversalPage";
 const pageTitle = "Sesja Narzeczeńska - naturalne zdjęcia | Siedlce i okolice";
 
 const pageDescription =
-    "Sesja narzeczeńska to wyjątkowy sposób, by uchwycić Waszą miłość przed ślubem. Tworzymy naturalne, pełne emocji zdjęcia zakochanych par, które staną się piękną pamiątką na całe życie.";
+    "💕 Sesja narzeczeńska to wyjątkowy sposób, by uchwycić Waszą miłość 💕 przed ślubem. Tworzymy naturalne, pełne emocji 😍 zdjęcia zakochanych par, które staną się piękną pamiątką na całe życie 📷";
 
 const heroImage =
     "/Images/blogs/sesja-narzeczenska/magia-sesji-narzeczenskiej/IMG_003sesja-narzeczenska-roksana-kamil-fotograf-jarek-olszewski.webp";
