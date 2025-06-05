@@ -4,7 +4,7 @@ import { getImagesFromFolder } from "@/lib/getImagesFromFolder";
 import { getBlogsByCategory } from "@/lib/getBlogsByCategory";
 import UniversalPage from "@/components/UniversalPage";
 
-const pageTitle = "Sesja Narzeczeńska - naturalne zdjęcia zakochanych";
+const pageTitle = "Sesja Narzeczeńska - naturalne zdjęcia | Siedlce i okolice";
 
 const pageDescription =
     "Sesja narzeczeńska to wyjątkowy sposób, by uchwycić Waszą miłość przed ślubem. Tworzymy naturalne, pełne emocji zdjęcia zakochanych par, które staną się piękną pamiątką na całe życie.";
