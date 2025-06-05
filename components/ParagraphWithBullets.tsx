@@ -18,7 +18,7 @@ export default function ParagraphWithBullets({
                 <p className=" text-gray-800 font-medium border-y py-2">{paragraph}</p>
             )}
             <ul className="list-disc pl-5 space-y-2 text-gray-700 text-start">
-                {bullets.map((point, idx) => (
+                {bullets?.map((point, idx) => (
                     <li key={idx}>{point}</li>
                 ))}
             </ul>
