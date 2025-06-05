@@ -6,6 +6,7 @@ export type Blog = {
     slug: string;
     title: string;
     image: string;
+    date: string;
     content: string; // wymagane
     category: string;
 };
@@ -29,7 +30,7 @@ export async function getBlogsByCategory(
 
         const filePath = path.join(categoryPath, filename);
         const fileContent = fs.readFileSync(filePath, "utf8");
-        const { data, content } = matter(fileContent);  // <-- tutaj dodajemy content
+        const { data, content } = matter(fileContent); // <-- tutaj dodajemy content
 
         // zdjęcie główne - jeśli nie ma 'image', to próbujemy wziąć pierwsze z images[0].src
         let mainImage = data.image;
@@ -46,6 +47,7 @@ export async function getBlogsByCategory(
             slug: data.slug || filename.replace(/\.md$/, ""),
             title: data.title || "Brak tytułu",
             image: mainImage || "",
+            date: data.date || "",
             category: categoryFilter,
             content, // <-- dodajemy content tutaj
         });

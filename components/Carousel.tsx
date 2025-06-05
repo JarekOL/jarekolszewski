@@ -21,7 +21,6 @@ const images = [
     { src: "/Images/carousel/pierwszy-taniec-foto.avif", position: "40% 10%" },
 ];
 
-// autoplay plugin
 function AutoplayPlugin(slider: KeenSliderInstance) {
     let timeout: ReturnType<typeof setTimeout>;
     let mouseOver = false;
@@ -35,7 +34,7 @@ function AutoplayPlugin(slider: KeenSliderInstance) {
         if (mouseOver) return;
         timeout = setTimeout(() => {
             slider.next();
-        }, 4000); // zmień czas (ms) według uznania
+        }, 5000);
     }
 
     slider.on("created", () => {
@@ -56,8 +55,6 @@ function AutoplayPlugin(slider: KeenSliderInstance) {
 
 const Carousel = () => {
     const [isFirstImageLoaded, setIsFirstImageLoaded] = useState(false);
-    // const [activeIndex, setActiveIndex] = useState(0);
-
     const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>(
         {
             loop: true,
@@ -65,10 +62,6 @@ const Carousel = () => {
             slides: { perView: 1 },
             renderMode: "performance",
             mode: "snap",
-            // slideChanged(slider) {
-            //     const relative = slider.track.details.rel;
-            //     setActiveIndex(relative);
-            // },
         },
         [AutoplayPlugin]
     );
@@ -111,8 +104,6 @@ const Carousel = () => {
                     </div>
                 ))}
             </div>
-
-            {/* Navigation */}
             <button
                 onClick={() => instanceRef.current?.prev()}
                 className="absolute left-4 top-1/2 -translate-y-1/2 z-20 p-2"
@@ -127,26 +118,6 @@ const Carousel = () => {
             >
                 <SlArrowRight className="text-4xl text-white/80 hover:text-white transition-colors duration-300" />
             </button>
-
-            {/* Dots */}
-            {/* <div
-                className="absolute bottom-10 left-1/2 -translate-x-1/2 flex gap-3 z-20"
-                role="presentation"
-                aria-hidden="true"
-            >
-                {images.map((_, idx) => (
-                    <button
-                        key={idx}
-                        onClick={() => instanceRef.current?.moveToIdx(idx)}
-                        className={`w-3 h-3 rounded-full transition-colors ${
-                            activeIndex === idx
-                                ? "bg-white"
-                                : "bg-white/30 hover:bg-white"
-                        }`}
-                        tabIndex={-1}
-                    />
-                ))}
-            </div> */}
         </div>
     );
 };

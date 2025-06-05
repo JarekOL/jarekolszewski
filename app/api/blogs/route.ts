@@ -82,8 +82,8 @@ export async function POST(req: NextRequest) {
             const src = `/Images/blogs/${normalizedCategory}/${slug}/${webpFileName}`;
             imageMetadataList.push({
                 src,
-                width: width || 1300,
-                height: height || 1000,
+                width: width || 1200,
+                height: height || 900,
             });
 
             if (heroIndex === i) {

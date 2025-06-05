@@ -7,11 +7,13 @@ import SectionCard from "@/components/common/SectionCard";
 import CategorySelect from "@/components/form-fields/CategorySelect";
 import SubSection from "@/components/form-fields/SubSection";
 import { FormData } from "@/types/addPages";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { useForm, useFieldArray, SubmitHandler, Path } from "react-hook-form";
 import slugify from "slugify";
 
 const AddPage: React.FC = () => {
+    const router = useRouter();
     const [galleryFolders, setGalleryFolders] = useState<string[]>([]);
     const [imageFolders, setImageFolders] = useState<string[]>([]);
     const [folders, setFolders] = useState<string[]>([]);
@@ -83,6 +85,7 @@ const AddPage: React.FC = () => {
         if (res.ok) {
             alert("Strona dodana!");
             reset();
+            router.push("/adm/strona");
         } else {
             alert(
                 res.status === 409

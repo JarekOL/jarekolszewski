@@ -4,10 +4,10 @@ import { useState } from "react";
 import slugify from "slugify";
 import { Trash2, Plus } from "lucide-react";
 import { CATEGORIES } from "@/constants/categories";
-
-
+import { useRouter } from "next/navigation";
 
 export default function AddBlogPage() {
+    const router = useRouter();
     const [heroIndex, setHeroIndex] = useState<number | null>(null);
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
     const [title, setTitle] = useState("");
@@ -63,7 +63,7 @@ export default function AddBlogPage() {
             setTitle("");
             setParagraphs([""]);
             setImages([]);
-            window.location.reload();
+            router.push("/adm/blog");
         } else {
             alert("Błąd zapisu");
         }
@@ -138,8 +138,6 @@ export default function AddBlogPage() {
                     accept="image/*"
                     onChange={handleImageUpload}
                 />
-
-               
             </div>
 
             {images.length > 0 && (
