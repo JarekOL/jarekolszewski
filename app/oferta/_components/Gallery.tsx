@@ -73,7 +73,7 @@ function ImgGallery({ image }: ImgGalleryProps) {
                         loaded ? "opacity-100" : "opacity-0"
                     }`}
                     src={image.responsiveImage.src}
-                    alt="Fotografia z galerii Jarek Olszewski"
+                    alt="Fotograf Siedlce Jarek Olszewski"
                     height={image.responsiveImage.height / 4}
                     width={image.responsiveImage.width / 4}
                     onLoadingComplete={() => setLoaded(true)}
