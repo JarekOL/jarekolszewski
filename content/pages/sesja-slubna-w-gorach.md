@@ -3,14 +3,14 @@ title: "Sesja ślubna i plener ślubny – Wyjątkowa sesja w górach"
 description: "Sesja ślubna w plenerze? 📷 Wybierz niezapomniany plener ślubny w górach 🏔️. Fotografia plenerowa 🌿, która odda magię Waszego dnia ✨.
 "
 blogCategory: "sesja-slubna"
-heroImage: "/Images/sesja-w-gorach/171_malgosia-i-jarek-sesja-slubna-plener-gora-zborow-jarek-olszewski-fotograf.JPG"
+heroImage: "/Images/sesja-w-gorach/165_malgosia-i-jarek-sesja-slubna-plener-gora-zborow-jarek-olszewski-fotograf.JPG"
 imageFolder: "blogs/fotografia-slubna/top-fotografia-slubna"
 galleryFolder: "sesja-w-gorach"
 content:
   hero:
     title: "Sesja ślubna w plenerze"
     backgroundImages:
-      - "/Images/sesja-w-gorach/171_malgosia-i-jarek-sesja-slubna-plener-gora-zborow-jarek-olszewski-fotograf.JPG"
+      - "/Images/sesja-w-gorach/165_malgosia-i-jarek-sesja-slubna-plener-gora-zborow-jarek-olszewski-fotograf.JPG"
     paragraphs: "Sesja ślubna w plenerze"
   introTitle: "Pomysł na sesję ślubną w górach – wyjątkowe miejsce na plener ślubny na Kasprowym Wierchu"
   introDesc: "Pomysł na sesję ślubną w górach – wyjątkowe miejsce na plener ślubny na Kasprowym Wierchu"
@@ -21,33 +21,14 @@ content:
     title: "- Kilka historii -"
     desc: "Kilka historii sesji ślubnej, które uchwyciły prawdziwe emocje, miłość i wyjątkowe chwile par w pięknych, naturalnych sceneriach."
   bullets:
-      title: "Co oferuję"
-      paragraph: "Fotografuję od początku przygotowań ślubnych do ostatnich uroczystości weselnych."
+      title: "Co mogę dla Ciebie sfotografować?"
+      paragraph: "Jako fotograf oferuję:"
       items:
-        - "Fotografuje od początku przygotowań ślubnych do ostatnich uroczystości weselnych"
-        - "Minimum 700 fotografii z reportażu (zdjęcia poddane autorskiej obróbce - naturalne i prawdziwe fotografie"
-        - "Sesję ślubną w dniu ślubu, krótka sesja w okolicach przyjęcia weselnego (by nie tracić cennego czasu)"
-        - "Sesje ślubną innego dnia, w wybranym przez Was miejscu"
-        - "Sesję narzeczeńska"
-        - "Foto-albumy, wydruki cyfrowe, fotoobrazy, zdjęcia na płótnie. portrety w ramkach (można dać odnośnik do oferty gdzie są zdjęcia fotoproduktów)"
-        - "Wydruki w dniu ślubu (pocztówki, portrety dla rodziców)"
-        - "Nośnik danych (pendrive)"
-        - "Zapis na chmurze - link do pobrania, bez ograniczeń i na dowolne urządzenie"
-        - "Galerię internetową chronioną hasłem"
-        - "Szybki termin realizacji - zdjęcia już w 21 dni do waszej dyspozycji"
-  gridImages:
-    - index: 3
-      position: "66% 0%"
-      title: "Sesja ślubna"
-      desc: "Sesja ślubna o zachodzie słońca na Kasprowym Wierchu – magia Tatr"
-    - index: 4
-      position: "66% 0%"
-      title: "Kasprowy Wierch"
-      desc: "Kasprowy Wierch i sesja ślubna w blasku złotego zachodu słońca"
-    - index: 5
-      position: "66% 0%"
-      title: "Zachod Słońca"
-      desc: "Romantyczna sesja ślubna na tle Tatr i zachodzącego słońca"
+        - "📷 Fotografię ślubną i reportażową"
+        - "💍 Sesje narzeczeńskie i ślubne w plenerze"
+        - "👶 Sesje rodzinne, ciążowe, noworodkowe"
+        - "💼 Zdjęcia biznesowe i produktowe"
+        - "🌳 Plenerowe sesje zdjęciowe"
   sections:
     - h2: "Sesja ślubna na Kasprowym Wierchu o zachodzie słońca-sesja ślubna w plenerze"
       subSections:

@@ -28,7 +28,6 @@ content:
         - "👶 Sesje rodzinne, ciążowe, noworodkowe"
         - "💼 Zdjęcia biznesowe i produktowe"
         - "🌳 Plenerowe sesje zdjęciowe w okolicach Sokołowa"
-        - "🏠 Sesje w moim studio fotograficznym"
   gridImages:
     - index: 1
       position: "66% 0%"
