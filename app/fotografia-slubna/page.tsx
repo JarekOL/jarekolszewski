@@ -16,8 +16,9 @@ import { getBlogsByCategory } from "@/lib/getBlogsByCategory";
 import Image from "next/image";
 import { CiShare1 } from "react-icons/ci";
 import ContactBtns from "@/components/ContactBtns";
+import SeoContentSection from "./SeoContentSection";
 
-const pageTitle = "Fotografia ślubna - uchwyć magię najważniejszego dnia";
+const pageTitle = "Fotograf Ślubny Siedlce i okolice - Fotografia Weselna";
 const pageDescription =
     "Twój ślub to wyjątkowe wydarzenie, pełne wzruszeń, radości i niezapomnianych chwil. Profesjonalna fotografia ślubna to sposób, by zatrzymać te momenty na zawsze. Jako doświadczeni fotografowie ślubni wiemy, jak ważne jest dla Was, aby każdy uśmiech, każdy gest i każda emocja zostały pięknie uwiecznione.";
 
@@ -103,7 +104,8 @@ export default async function FotografiaSlubna() {
                 <div className="w-full py-10">
                     <div className="max-w-5xl mx-auto px-4">
                         <h1 className="text-2xl lg:text-3xl font-light text-center mb-10">
-                            Fotografia ślubna, co skrywa?
+                            Fotograf Ślubny Siedlce i okolice - Fotografia
+                            Weselna
                         </h1>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6">
                             {OFERTAIMAGES.map((img, index) => (
@@ -112,7 +114,7 @@ export default async function FotografiaSlubna() {
                                         <Image
                                             src={img.src}
                                             alt={img.title}
-                                            title={`${img.title} - Jarek Olszewski`}
+                                            title={`${img.title} - Fotografia ślubna siedlce`}
                                             fill
                                             sizes="320px"
                                             priority={index === 0}
@@ -220,6 +222,7 @@ export default async function FotografiaSlubna() {
                             <InstagramGrid />
                         </div>
                     </div>
+                    <SeoContentSection />
                 </div>
             </div>
         </>

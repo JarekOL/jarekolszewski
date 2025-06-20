@@ -61,7 +61,7 @@ export default function HeroSection({
                             priority
                             className="object-cover "
                         />
-                        <div className="absolute inset-0 bg-black/45 lg:bg-black/70 z-30" />
+                        <div className="absolute inset-0 bg-black/45 lg:bg-black/65 z-30" />
                     </div>
                 </div>
             ))}
