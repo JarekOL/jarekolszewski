@@ -10,7 +10,7 @@ const CustomPrevArrow = ({ onClick }: { onClick?: () => void }) => (
         aria-label="Poprzedni slajd"
         className="absolute left-4 top-1/2 -translate-y-1/2 z-10 p-2"
     >
-        <SlArrowLeft className="text-4xl text-white/80 hover:text-white duration-300 transition-colors" />
+        <SlArrowLeft className="text-4xl text-brand-nav/80 hover:text-[#d44626ee] transition-colors" />
     </button>
 );
 
@@ -20,7 +20,7 @@ const CustomNextArrow = ({ onClick }: { onClick?: () => void }) => (
         aria-label="Następny slajd"
         className="absolute right-4 top-1/2 -translate-y-1/2 z-10 p-2"
     >
-        <SlArrowRight className="text-4xl text-white/80 hover:text-white duration-300 transition-colors" />
+        <SlArrowRight className="text-4xl text-brand-nav/80 hover:text-[#d44626ee] transition-colors" />
     </button>
 );
 
@@ -58,7 +58,7 @@ const CarouselProps = ({ images }: { images: ImageType[] }) => {
             id="carousel"
             className="flex justify-center items-center relative"
         >
-            <Slider {...settings} className="w-full slick-slider bg-black">
+            <Slider {...settings} className="w-full slick-slider">
                 {images.map((image, index) => (
                     <div
                         key={index}
