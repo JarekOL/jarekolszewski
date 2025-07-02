@@ -58,7 +58,7 @@ const CarouselProps = ({ images }: { images: ImageType[] }) => {
             id="carousel"
             className="flex justify-center items-center relative"
         >
-            <Slider {...settings} className="w-full slick-slider">
+            <Slider {...settings} className="w-full slick-slider bg-black">
                 {images.map((image, index) => (
                     <div
                         key={index}
@@ -67,7 +67,7 @@ const CarouselProps = ({ images }: { images: ImageType[] }) => {
                         <Image
                             src={image.src}
                             alt={`Jarek Olszewski - Fotograf ${index + 1}`}
-                            className="object-cover"
+                            className="object-contain"
                             fill
                             sizes="37vw"
                         />

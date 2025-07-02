@@ -82,7 +82,7 @@ export default async function FotografiaSlubna() {
     const allImages = getImagesFromFolder("PodglądoweZdjecia", 6);
     const allImagesWeding = getImagesFromFolder(
         "blogs/fotografia-slubna/top-fotografia-slubna",
-        6
+99
     );
 
     const formattedImages = allImagesWeding.map((img) => ({
