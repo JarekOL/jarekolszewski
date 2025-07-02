@@ -6,7 +6,7 @@ export default function FacebookPixel() {
     return (
         <>
             <Script
-                id="804838180220019"
+                id="501829122890586"
                 strategy="afterInteractive"
                 dangerouslySetInnerHTML={{
                     __html: `
@@ -18,7 +18,7 @@ export default function FacebookPixel() {
             t.src=v;s=b.getElementsByTagName(e)[0];
             s.parentNode.insertBefore(t,s)}(window, document,'script',
             'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '804838180220019');
+            fbq('init', '501829122890586');
             fbq('track', 'PageView');
           `,
                 }}
@@ -28,7 +28,7 @@ export default function FacebookPixel() {
                     height="1"
                     width="1"
                     style={{ display: "none" }}
-                    src="https://www.facebook.com/tr?id=804838180220019&ev=PageView&noscript=1"
+                    src="https://www.facebook.com/tr?id=501829122890586&ev=PageView&noscript=1"
                 />
             </noscript>
         </>
