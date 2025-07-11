@@ -5,7 +5,7 @@ import Image from "next/image";
 type InstagramPostProps = {
     media_url: string | null;
     permalink: string | null;
-    alt: string;
+    alt: string ;
     media_type?: string;
 };
 
@@ -28,7 +28,7 @@ export default function InstagramPost({
             href={permalink}
             target="_blank"
             rel="noopener noreferrer"
-            title={alt}
+            title="Jarek Olszewski Fotograf - Instagram"
         >
             <div className="relative aspect-square">
                 <span className="sr-only">{`${alt} Instagram`}</span>
