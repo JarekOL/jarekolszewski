@@ -21,7 +21,7 @@ export default function SesjaComponent({
                 src={img}
                 alt={title}
                 style={{ objectPosition: position }}
-                sizes="250px"
+                sizes="300px"
                 className="object-cover"
                 fill
                 quality={75}
