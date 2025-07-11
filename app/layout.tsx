@@ -20,14 +20,12 @@ const geistSans = Geist({
 export const metadata: Metadata = {
     metadataBase: new URL("https://jarekolszewski.pl"),
     keywords: [
-        "fotograf Siedlce",
+        "fotograf siedlce",
         "fotografia ślubna",
         "fotograf ślubny",
-        "sesja narzeczeńska",
         "reportaż ślubny",
         "Jarek Olszewski",
         "fotograf warszawa",
-        "siedlce",
     ],
     openGraph: {
         url: "https://jarekolszewski.pl/",
