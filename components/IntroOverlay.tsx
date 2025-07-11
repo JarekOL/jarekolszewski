@@ -47,9 +47,9 @@ export default function IntroOverlay() {
                 fadeOut ? "opacity-0" : "opacity-100"
             }`}
         >
-            <h1 className="text-gray-200 animate-pulse text-4xl font-bold md:text-5xl lg:text-7xl tracking-wide">
+            <p className="text-gray-200 animate-pulse text-4xl font-bold md:text-5xl lg:text-7xl tracking-wide">
                 {text}
-            </h1>
+            </p>
         </div>
     );
 }
