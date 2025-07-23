@@ -60,7 +60,7 @@ export default function IntroOverlay() {
                             duration: 0.6,
                             ease: "easeOut",
                         }}
-                        className="text-gray-200 text-4xl font-bold md:text-5xl lg:text-7xl tracking-wide"
+                        className="text-gray-200 text-5xl font-bold md:text-6xl lg:text-7xl tracking-wide"
                     >
                         {text.split("").map((char, index) => (
                             <motion.span
