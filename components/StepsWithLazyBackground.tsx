@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import FadeInOnScroll from "./FadeInOnScroll";
 
 export default function StepsWithLazyBackground() {
     const [isInView, setIsInView] = useState(false);
@@ -62,12 +63,14 @@ export default function StepsWithLazyBackground() {
                     ["2", "Rezerwacja terminu"],
                     ["3", "Zdjęcia w dniu sesji"],
                     ["4", "Obróbka i przekazanie galerii"],
-                ].map(([step, label]) => (
+                ].map(([step, label], i) => (
                     <div key={step}>
-                        <div className="text-6xl font-bold mb-4 text-brand-nav ">
-                            {step}
-                        </div>
-                        <p className="font-bold">{label}</p>
+                        <FadeInOnScroll delay={i / 9}>
+                            <div className="text-6xl font-bold mb-4 text-brand-nav ">
+                                {step}
+                            </div>
+                            <p className="font-bold">{label}</p>
+                        </FadeInOnScroll>
                     </div>
                 ))}
             </div>

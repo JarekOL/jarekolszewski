@@ -1,10 +1,10 @@
 "use client";
 import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function IntroOverlay() {
     const [text, setText] = useState("");
     const [shouldRender, setShouldRender] = useState(false);
-    const [fadeOut, setFadeOut] = useState(false);
 
     const fullText = "Witaj";
 
@@ -29,27 +29,65 @@ export default function IntroOverlay() {
             if (index === fullText.length) clearInterval(interval);
         }, 320 / fullText.length);
 
-        const fadeOutTimer = setTimeout(() => setFadeOut(true), 900);
+
         const removeTimer = setTimeout(() => setShouldRender(false), 2500);
 
         return () => {
             clearInterval(interval);
-            clearTimeout(fadeOutTimer);
             clearTimeout(removeTimer);
         };
     }, [shouldRender]);
 
-    if (!shouldRender) return null;
-
     return (
-        <div
-            className={`fixed z-[9999] top-0 left-0 w-full h-full bg-black flex items-center justify-center px-4 transition-opacity duration-700 ${
-                fadeOut ? "opacity-0" : "opacity-100"
-            }`}
-        >
-            <p className="text-gray-200 animate-pulse text-4xl font-bold md:text-5xl lg:text-7xl tracking-wide ">
-                {text}
-            </p>
-        </div>
+        <AnimatePresence>
+            {shouldRender && (
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0, scale: 1.3 }}
+                    transition={{
+                        duration: 0.5,
+                        ease: "easeOut",
+                    }}
+                    className="fixed z-[9999] top-0 left-0 w-full h-full bg-black flex items-center justify-center px-4"
+                >
+                    <motion.p
+                        initial={{ y: 50, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        exit={{ y: -30, opacity: 0 }}
+                        transition={{
+                            delay: 0.2,
+                            duration: 0.6,
+                            ease: "easeOut",
+                        }}
+                        className="text-gray-200 text-4xl font-bold md:text-5xl lg:text-7xl tracking-wide"
+                    >
+                        {text.split("").map((char, index) => (
+                            <motion.span
+                                key={index}
+                                initial={{
+                                    opacity: 0,
+                                    y: 20,
+                                    filter: "blur(10px)",
+                                }}
+                                animate={{
+                                    opacity: 1,
+                                    y: 0,
+                                    scale: 1,
+                                    filter: "blur(0px)",
+                                }}
+                                transition={{
+                                    delay: index * 0.1 + 0.3,
+                                    duration: 0.3,
+                                    ease: "easeOut",
+                                }}
+                            >
+                                {char}
+                            </motion.span>
+                        ))}
+                    </motion.p>
+                </motion.div>
+            )}
+        </AnimatePresence>
     );
 }

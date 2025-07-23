@@ -109,53 +109,55 @@ export default function Home() {
                     </FadeInOnScroll>
                 </div>
 
-                <section className="relative grid grid-cols-1 lg:grid-cols-4 my-8 w-full h-full">
-                    <div className="relative -space-x-10 lg:drop-shadow-xl lg:space-x-0 lg:col-span-4 lg:mx-auto mt-12 mb-12 lg:mb-16 ml-12 px-3 lg:w-full lg:max-w-2xl w-[80%] sm:w-3/4 h-64 lg:h-96">
-                        <Image
-                            src="/Images/carousel/01_fotografia_slubna_siedlce.avif"
-                            alt="Fotografia ślubna Para Młoda podczas ceremonii"
-                            sizes="(max-width: 768px) 300px, 400px"
-                            fill
-                            className="object-cover"
-                            quality={75}
-                        />
-                        <div className="lg:bottom-6 -bottom-12 left-0 lg:left-1/2 z-10 absolute bg-black/60 backdrop-blur-sm px-8 py-6 w-full lg:w-1/2 lg:py-8 h-max text-start lg:-translate-x-1/2">
-                            <p className="mb-2 text-white text-xl lg:text-3xl capitalize">
-                                reportaż ślubny
-                            </p>
-                            <Link
-                                href="fotografia-slubna"
-                                aria-label="Fotografia Slubna"
-                                className="hover:bg-white/20 px-4 py-1 border border-white text-white text-sm transition-colors"
-                            >
-                                Zobacz
-                            </Link>
-                        </div>
-                    </div>
-                    {OFERTAIMAGES.map((img, index) => (
-                        <SesjaComponent
-                            key={index}
-                            img={img.src}
-                            position={img.position}
-                            title={img.title}
-                            href={img.href}
-                        />
-                    ))}
 
-                    <Link
-                        href="/oferta"
-                        aria-label="oferta"
-                        className="top-12 -right-[14%] hover:bg-black mx-auto mt-24 lg:mt-12 px-12 py-8 border-2 border-black w-max h-max font-semibold hover:text-white transition-color-colors"
-                    >
-                        <p className="text-center uppercase">
-                            {["i", "wiele", "więcej"].map((word, index) => (
-                                <span key={index} className="block">
-                                    {word}
-                                </span>
-                            ))}
-                        </p>
-                    </Link>
-                </section>
+                    <section className="relative grid grid-cols-1 lg:grid-cols-4 my-8 w-full h-full">
+                        <div className="relative -space-x-10 lg:drop-shadow-xl lg:space-x-0 lg:col-span-4 lg:mx-auto mt-12 mb-12 lg:mb-16 ml-12 px-3 lg:w-full lg:max-w-2xl w-[80%] sm:w-3/4 h-64 lg:h-96">
+                            <Image
+                                src="/Images/carousel/01_fotografia_slubna_siedlce.avif"
+                                alt="Fotografia ślubna Para Młoda podczas ceremonii"
+                                sizes="(max-width: 768px) 300px, 400px"
+                                fill
+                                className="object-cover"
+                                quality={75}
+                            />
+                            <div className="lg:bottom-6 -bottom-12 left-0 lg:left-1/2 z-10 absolute bg-black/60 backdrop-blur-sm px-8 py-6 w-full lg:w-1/2 lg:py-8 h-max text-start lg:-translate-x-1/2">
+                                <p className="mb-2 text-white text-xl lg:text-3xl capitalize">
+                                    reportaż ślubny
+                                </p>
+                                <Link
+                                    href="fotografia-slubna"
+                                    aria-label="Fotografia Slubna"
+                                    className="hover:bg-white/20 px-4 py-1 border border-white text-white text-sm transition-colors"
+                                >
+                                    Zobacz
+                                </Link>
+                            </div>
+                        </div>
+
+                        {OFERTAIMAGES.map((img, index) => (
+                            <SesjaComponent
+                                key={index}
+                                img={img.src}
+                                position={img.position}
+                                title={img.title}
+                                href={img.href}
+                            />
+                        ))}
+
+                        <Link
+                            href="/oferta"
+                            aria-label="oferta"
+                            className="top-12 -right-[14%] hover:bg-black mx-auto mt-24 lg:mt-12 px-12 py-8 border-2 border-black w-max h-max font-semibold hover:text-white transition-color-colors"
+                        >
+                            <p className="text-center uppercase">
+                                {["i", "wiele", "więcej"].map((word, index) => (
+                                    <span key={index} className="block">
+                                        {word}
+                                    </span>
+                                ))}
+                            </p>
+                        </Link>
+                    </section>
             </div>
 
             <section className="bg-white px-4 py-12">
