@@ -114,7 +114,7 @@ export default function Home() {
                         <div className="relative -space-x-10 lg:drop-shadow-xl lg:space-x-0 lg:col-span-4 lg:mx-auto mt-12 mb-12 lg:mb-16 ml-12 px-3 lg:w-full lg:max-w-2xl w-[80%] sm:w-3/4 h-64 lg:h-96">
                             <Image
                                 src="/Images/carousel/01_fotografia_slubna_siedlce.avif"
-                                alt="Fotografia ślubna Para Młoda podczas ceremonii"
+                                alt="fotografia slubna siedlce - Para Młoda podczas ceremonii"
                                 sizes="(max-width: 768px) 300px, 400px"
                                 fill
                                 className="object-cover"

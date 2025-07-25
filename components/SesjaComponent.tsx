@@ -19,7 +19,7 @@ export default function SesjaComponent({
         <div className="relative -space-x-10 lg:space-x-8 mt-12 mb-12 ml-12 px-3 w-[80%] sm:w-3/4 lg:w-[86%] h-64">
             <Image
                 src={img}
-                alt={title}
+                alt={`fotograf siedlce - ${title}`}
                 style={{ objectPosition: position }}
                 sizes="300px"
                 className="object-cover"

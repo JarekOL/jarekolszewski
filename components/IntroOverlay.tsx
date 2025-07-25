@@ -12,8 +12,8 @@ export default function IntroOverlay() {
         const lastShown = localStorage.getItem("intro-shown-at");
         const now = Date.now();
 
-        // 1 dzień = 86400000 ms
-        if (!lastShown || now - parseInt(lastShown) > 86400000) {
+        // 1 dzień = 86400000
+        if (!lastShown || now - parseInt(lastShown) > 3600000) {
             localStorage.setItem("intro-shown-at", now.toString());
             setShouldRender(true);
         }
