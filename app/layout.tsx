@@ -47,6 +47,11 @@ export default async function RootLayout({
         <html lang="pl">
             <head>
                 <SeoHead />
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: `(function(){try{var last=localStorage.getItem('intro-shown-at');var now=Date.now();if(last && (now - parseInt(last,10)) < 3600000){document.documentElement.dataset.intro='skip';}else{document.documentElement.dataset.intro='show';}}catch(e){} })();`,
+                    }}
+                />
                 <link
                     rel="preload"
                     href="/_next/static/media/569ce4b8f30dc480-s.p.woff2"
@@ -56,21 +61,23 @@ export default async function RootLayout({
                 />
                 <FacebookPixel />
             </head>
-            <body
-                className={`flex flex-col min-h-screen w-full font-light antialiased overflow-y-auto touch-auto
- ${geistSans.className}`}
-            >
+            <body className={`${geistSans.className} overflow-y-auto`}>
                 <IntroOverlay />
-                <Nav />
-                <main className="flex-1 w-full overflow-x-hidden relative min-h-[90vh]">
-                    {children}
-                </main>
-                {!cookiesAccepted && <CookieBanner />}
+                <div
+                    id="site-root"
+                    className="flex flex-col min-h-screen w-full font-light antialiased touch-auto"
+                >
+                    <Nav />
+                    <main className="flex-1 w-full overflow-x-hidden relative min-h-[90vh]">
+                        {children}
+                    </main>
+                    {!cookiesAccepted && <CookieBanner />}
 
-                <Messenger />
-                <ScrollToTopButton />
-                <Footer />
-                <GAnalytics />
+                    <Messenger />
+                    <ScrollToTopButton />
+                    <Footer />
+                    <GAnalytics />
+                </div>
             </body>
         </html>
     );

@@ -9,14 +9,14 @@ export default function IntroOverlay() {
     const fullText = "Witaj";
 
     useEffect(() => {
-        const lastShown = localStorage.getItem("intro-shown-at");
-        const now = Date.now();
-
-        // 1 dzień = 86400000
-        if (!lastShown || now - parseInt(lastShown) > 3600000) {
-            localStorage.setItem("intro-shown-at", now.toString());
-            setShouldRender(true);
+        if (typeof window === "undefined") return;
+        const ds = document.documentElement.dataset.intro;
+        if (ds === "skip") {
+            setShouldRender(false);
+            return;
         }
+        // dataset is 'show' (set by inline script) or undefined — show overlay
+        setShouldRender(true);
     }, []);
 
     useEffect(() => {
@@ -29,8 +29,15 @@ export default function IntroOverlay() {
             if (index === fullText.length) clearInterval(interval);
         }, 320 / fullText.length);
 
-
-        const removeTimer = setTimeout(() => setShouldRender(false), 2500);
+        const removeTimer = setTimeout(() => {
+            try {
+                localStorage.setItem("intro-shown-at", Date.now().toString());
+            } catch {}
+            try {
+                document.documentElement.dataset.intro = "skip";
+            } catch {}
+            setShouldRender(false);
+        }, 2500);
 
         return () => {
             clearInterval(interval);
@@ -49,12 +56,11 @@ export default function IntroOverlay() {
                         duration: 0.5,
                         ease: "easeOut",
                     }}
-                    className="fixed z-[9999] top-0 left-0 w-full h-full bg-black flex items-center justify-center px-4"
+                    className=" fixed z-[9999] top-0 left-0 w-full h-full bg-black flex items-center justify-center px-4"
                 >
                     <motion.p
-                        initial={{ y: 50, opacity: 0 }}
-                        animate={{ y: 0, opacity: 1 }}
-                        exit={{ y: -30, opacity: 0 }}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
                         transition={{
                             delay: 0.2,
                             duration: 0.6,

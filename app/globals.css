@@ -6,7 +6,6 @@ html {
     scroll-behavior: smooth;
 }
 
-
 @keyframes shimmer {
     0% {
         transform: translateX(-100%);
@@ -107,4 +106,14 @@ html {
     body {
         @apply bg-background text-foreground;
     }
+}
+
+/* Hide main site content while intro should play. The inline script in layout sets html[data-intro='show'|'skip'] before paint. */
+html[data-intro="show"] #site-root {
+    visibility: hidden;
+}
+
+/* If intro should be skipped, hide the overlay immediately */
+html[data-intro="skip"] .intro-overlay {
+    display: none !important;
 }
