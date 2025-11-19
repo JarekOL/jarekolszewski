@@ -103,7 +103,7 @@ export default async function FotografiaSlubna() {
             <div className="text-center bg-white w-full">
                 <div className="w-full py-10">
                     <div className="max-w-5xl mx-auto px-4">
-                        <h1 className="text-2xl lg:text-3xl font-light text-center mb-10">
+                        <h1 className="text-3xl font-serif lg:text-5xl max-w-4xl mx-auto font-light text-center mb-10 px-3 py-4">
                             Fotograf Ślubny Siedlce i okolice - Fotografia
                             Weselna
                         </h1>
