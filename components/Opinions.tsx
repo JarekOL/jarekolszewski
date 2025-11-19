@@ -29,9 +29,9 @@ export default function Opinions() {
                     return (
                         <CarouselItem
                             key={i}
-                            className="basis-[80%] lg:basis-[40%]"
+                            className="basis-[80%] lg:basis-[40%] cursor-grab"
                         >
-                            <div className="bg-white rounded-2xl shadow-lg py-6 px-3 h-full flex flex-col justify-between hover:shadow-xl transition-shadow duration-300 border border-neutral-200">
+                            <div className="bg-white rounded-2xl py-6 px-3 h-full flex flex-col justify-between border border-neutral-200">
                                 <p className="text-neutral-700 mb-4 text-base leading-relaxed italic">
                                     “{opinia.text}”
                                 </p>
