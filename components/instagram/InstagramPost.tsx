@@ -1,11 +1,12 @@
 import Link from "next/link";
 import ShimmerLoader from "../ShimmerLoader";
 import Image from "next/image";
+import LazyVideo from "../LazyVideo";
 
 type InstagramPostProps = {
     media_url: string | null;
     permalink: string | null;
-    alt: string ;
+    alt: string;
     media_type?: string;
 };
 
@@ -33,13 +34,18 @@ export default function InstagramPost({
             <div className="relative aspect-square">
                 <span className="sr-only">{`${alt} Instagram`}</span>
                 {media_type === "VIDEO" ? (
-                    <video
+                    <LazyVideo
                         src={media_url}
                         className="w-full h-full object-cover"
                         autoPlay
                         muted
                         loop
                         playsInline
+                        placeholder={
+                            <div className="w-full h-full bg-zinc-200">
+                                <ShimmerLoader />
+                            </div>
+                        }
                     />
                 ) : (
                     <Image
