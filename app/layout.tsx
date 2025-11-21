@@ -52,13 +52,6 @@ export default async function RootLayout({
                         __html: `(function(){try{var last=localStorage.getItem('intro-shown-at');var now=Date.now();if(last && (now - parseInt(last,10)) < 3600000){document.documentElement.dataset.intro='skip';}else{document.documentElement.dataset.intro='show';}}catch(e){} })();`,
                     }}
                 />
-                <link
-                    rel="preload"
-                    href="/_next/static/media/569ce4b8f30dc480-s.p.woff2"
-                    as="font"
-                    type="font/woff2"
-                    crossOrigin="anonymous"
-                />
                 <FacebookPixel />
             </head>
             <body className={`${geistSans.className} overflow-y-auto`}>

@@ -127,7 +127,6 @@ export default function SeoHead() {
                 name="google-site-verification"
                 content="w0q-Q8zX94EcR4AuO8Pem81VxSmPM3mvrtSONwZupgw"
             />
-            <link rel="icon" href="/favicon.ico" sizes="any" />
             <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
             <script
                 type="application/ld+json"
