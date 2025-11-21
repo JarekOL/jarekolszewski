@@ -44,7 +44,9 @@ export default function LazyVideo({
 
     // allow passing a wrapper className, but ensure the container
     // is always a square and hides overflow to keep consistent layout
-    const wrapperClass = `relative aspect-square overflow-hidden ${className ?? ""}`;
+    const wrapperClass = `relative aspect-square overflow-hidden ${
+        className ?? ""
+    }`;
 
     const { className: videoClassName, ...videoProps } = rest as any;
 
@@ -54,11 +56,16 @@ export default function LazyVideo({
                 <video
                     src={src}
                     {...(videoProps as React.VideoHTMLAttributes<HTMLVideoElement>)}
-                    className={`w-full h-full object-cover object-center ${videoClassName ?? ""}`}
+                    className={`w-full h-full object-cover object-center ${
+                        videoClassName ?? ""
+                    }`}
                 />
             ) : (
                 placeholder ?? (
-                    <div className="w-full h-full bg-zinc-200 flex items-center justify-center" aria-hidden>
+                    <div
+                        className="w-full h-full bg-zinc-200 flex items-center justify-center"
+                        aria-hidden
+                    >
                         <ShimmerLoader />
                     </div>
                 )
