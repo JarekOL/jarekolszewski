@@ -42,13 +42,23 @@ export default function LazyVideo({
         if (isVisible) setMounted(true);
     }, [isVisible]);
 
+    // allow passing a wrapper className, but ensure the container
+    // is always a square and hides overflow to keep consistent layout
+    const wrapperClass = `relative aspect-square overflow-hidden ${className ?? ""}`;
+
+    const { className: videoClassName, ...videoProps } = rest as any;
+
     return (
-        <div ref={ref} className={className}>
+        <div ref={ref} className={wrapperClass}>
             {mounted ? (
-                <video src={src} {...rest} />
+                <video
+                    src={src}
+                    {...(videoProps as React.VideoHTMLAttributes<HTMLVideoElement>)}
+                    className={`w-full h-full object-cover object-center ${videoClassName ?? ""}`}
+                />
             ) : (
                 placeholder ?? (
-                    <div className="w-full h-full bg-zinc-200">
+                    <div className="w-full h-full bg-zinc-200 flex items-center justify-center" aria-hidden>
                         <ShimmerLoader />
                     </div>
                 )

@@ -31,7 +31,7 @@ export default function InstagramPost({
             rel="noopener noreferrer"
             title="Jarek Olszewski Fotograf - Instagram"
         >
-            <div className="relative aspect-square">
+            <div className="relative aspect-square overflow-hidden">
                 <span className="sr-only">{`${alt} Instagram`}</span>
                 {media_type === "VIDEO" ? (
                     <LazyVideo
