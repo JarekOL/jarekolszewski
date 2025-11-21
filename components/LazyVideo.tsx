@@ -16,7 +16,6 @@ export default function LazyVideo({
     ...rest
 }: LazyVideoProps) {
     const ref = useRef<HTMLDivElement | null>(null);
-    const [isVisible, setIsVisible] = useState(false);
     const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
@@ -24,12 +23,13 @@ export default function LazyVideo({
         const el = ref.current;
         const obs = new IntersectionObserver(
             (entries) => {
-                entries.forEach((entry) => {
+                for (const entry of entries) {
                     if (entry.isIntersecting) {
-                        setIsVisible(true);
+                        setMounted(true);
                         obs.disconnect();
+                        break;
                     }
-                });
+                }
             },
             { rootMargin: "200px" }
         );
@@ -37,28 +37,18 @@ export default function LazyVideo({
         return () => obs.disconnect();
     }, []);
 
-    // Mount video only once it becomes visible to avoid repeated layout churn
-    useEffect(() => {
-        if (isVisible) setMounted(true);
-    }, [isVisible]);
-
-    // allow passing a wrapper className, but ensure the container
-    // is always a square and hides overflow to keep consistent layout
+    // wrapper: keep square aspect and allow custom wrapper class
     const wrapperClass = `relative aspect-square overflow-hidden ${
         className ?? ""
     }`;
-
-    const { className: videoClassName, ...videoProps } = rest as any;
 
     return (
         <div ref={ref} className={wrapperClass}>
             {mounted ? (
                 <video
                     src={src}
-                    {...(videoProps as React.VideoHTMLAttributes<HTMLVideoElement>)}
-                    className={`w-full h-full object-cover object-center ${
-                        videoClassName ?? ""
-                    }`}
+                    {...(rest as React.VideoHTMLAttributes<HTMLVideoElement>)}
+                    className={"w-full h-full object-cover object-center"}
                 />
             ) : (
                 placeholder ?? (
